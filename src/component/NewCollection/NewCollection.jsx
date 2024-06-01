@@ -1,19 +1,18 @@
 import React from "react";
 
-import data_product from "../Assets/Assets/data";
+import new_collection from "../Assets/Assets/new_collections";
 import Item from "../Item/Item";
 
-import "./Popular.css";
+import "./NewCollection.css";
 
-const Popular = () => {
+const NewCollection = () => {
   return (
-    <div className="popular">
-      <h1>POPULAR IN WOMEN</h1>
+    <div className="new-collection">
+      <h1>NEW COLLECTIONS</h1>
       <hr />
 
-      {/* mapping the data, giving the props to the item compo */}
-      <div className="popular-item">
-        {data_product.map((item) => {
+      <div className="collections">
+        {new_collection.map((item) => {
           return (
             <Item
               key={item.id}
@@ -30,4 +29,4 @@ const Popular = () => {
   );
 };
 
-export default Popular;
+export default NewCollection;
