@@ -3,11 +3,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./component/Navbar/Navbar";
 import Shop from "./pages/Shop";
 import ShopCategory from "./pages/ShopCategory";
-
-import "./App.css";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import LoginSignup from "./pages/LoginSignup";
+import Footer from "./component/Footer/Footer";
+import men_banner from "./component/Assets/Assets/banner_mens.png";
+import women_banner from "./component/Assets/Assets/banner_women.png";
+import kids_banner from "./component/Assets/Assets/banner_kids.png";
+
+import "./App.css";
 
 function App() {
   return (
@@ -17,9 +21,20 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Shop />} />
-          <Route path="/men" element={<ShopCategory category="men" />} />
-          <Route path="/women" element={<ShopCategory category="women" />} />
-          <Route path="/kids" element={<ShopCategory category="kids" />} />
+
+          {/* the categories are props value */}
+          <Route
+            path="/men"
+            element={<ShopCategory banner={men_banner} category="men" />}
+          />
+          <Route
+            path="/women"
+            element={<ShopCategory banner={women_banner} category="women" />}
+          />
+          <Route
+            path="/kids"
+            element={<ShopCategory banner={kids_banner} category="kids" />}
+          />
 
           <Route path="/product" category={<Product />}>
             {/* ROUTES FOR INDIVIUDAL Product */}
@@ -29,6 +44,7 @@ function App() {
           <Route path="/cart" category={<Cart />} />
           <Route path="/login" category={<LoginSignup />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

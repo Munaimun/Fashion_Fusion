@@ -4,9 +4,9 @@ import hand_icon from "../Assets/Assets/hand_icon.png";
 import arrow_icon from "../Assets/Assets/arrow.png";
 import hero_img from "../Assets/Assets/hero_image.png";
 
-import "./Hero.css";
+import "./Home.css";
 
-const Hero = () => {
+const Home = () => {
   return (
     <div className="hero">
       <div className="hero-left">
@@ -34,4 +34,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;
