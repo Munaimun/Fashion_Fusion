@@ -15,7 +15,7 @@ const ShopCategory = (props) => {
       {/* 1st div */}
       <div className="shopcategpry-indexsort">
         <p>
-          <span>Showing 1-12</span>out of 36 products{" "}
+          <span>Showing 1-12</span> out of 36 products
         </p>
         <div className="shopcategory-sort">
           <select className="dropdown" value="sort by">
@@ -42,6 +42,8 @@ const ShopCategory = (props) => {
           ) : null
         )}
       </div>
+
+      <div className="shopcategory-loadmore">Explore More</div>
     </div>
   );
 };
