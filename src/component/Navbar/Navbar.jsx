@@ -24,7 +24,7 @@ const Navbar = () => {
       <ul className="nav-menu">
         <li onClick={() => setMenu("shop")}>
           <Link className="nav-logo-link" to="/">
-            Shop
+            Home
           </Link>{" "}
           {menu === "shop" ? <hr /> : <></>}
         </li>
