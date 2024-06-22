@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { shopContext } from "../context/ShopContext";
 import Breadcrum from "../component/Breadcrums/Breadcrum";
+import ProductDisplay from "../component/ProductDisplay/ProductDisplay";
 
 const Product = () => {
   const { all_products } = useContext(shopContext);
@@ -12,6 +13,7 @@ const Product = () => {
   return (
     <div>
       {product ? <Breadcrum product={product} /> : <div>Product not found</div>}
+      <ProductDisplay product={product} />
     </div>
   );
 };
