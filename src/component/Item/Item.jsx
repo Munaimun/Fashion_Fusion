@@ -9,7 +9,8 @@ const Item = (props) => {
     <div className="item">
       {/* wrapping the image with link, and giving the id from the props */}
       <Link to={`/product/${props.id}`}>
-        <img src={props.image} alt="" />
+        {/* onClick function to navigate to the product */}
+        <img onClick={window.scrollTo(0, 0)} src={props.image} alt="" />
       </Link>
       <p>{props.name}</p>
       <div className="item-prices">
